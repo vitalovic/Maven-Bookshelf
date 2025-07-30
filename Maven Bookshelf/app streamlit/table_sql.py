@@ -8,7 +8,7 @@ print("File esiste?", os.path.exists("goodreads.db"))
 # Connessione al database
 conn = sqlite3.connect(r'goodreads.db')
 
-books = pd.read_sql( """SELECT * FROM works ORDER BY original_title DESC""", conn)
+books = pd.read_sql( "SELECT * FROM works ORDER BY original_title DESC", conn)
 
 colonne_intere = ["original_publication_year", "num_pages",  "reviews_count", "ratings_count"]
 for col in colonne_intere:
