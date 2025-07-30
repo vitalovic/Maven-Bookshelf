@@ -1,7 +1,9 @@
 import sqlite3
 import pandas as pd
 import streamlit as st
+import os
 
+print("File esiste?", os.path.exists("goodreads.db"))
 
 # Connessione al database
 conn = sqlite3.connect(r'goodreads.db')
