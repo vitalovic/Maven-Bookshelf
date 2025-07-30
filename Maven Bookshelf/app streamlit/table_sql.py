@@ -4,6 +4,11 @@ import streamlit as st
 import os
 
 print("File esiste?", os.path.exists("goodreads.db"))
+cursor = conn.cursor()
+cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
+tables = cursor.fetchall()
+print(tables)
+
 
 # Connessione al database
 conn = sqlite3.connect(r'goodreads.db')
