@@ -4,7 +4,7 @@ import streamlit as st
 
 
 # Connessione al database
-conn = sqlite3.connect(r'C:\Users\Davide\OneDrive\Desktop\Maven Bookshelf\database sql\goodreads.db')
+conn = sqlite3.connect(r'goodreads.db')
 
 books = pd.read_sql( """SELECT * FROM works ORDER BY original_title DESC""", conn)
 
