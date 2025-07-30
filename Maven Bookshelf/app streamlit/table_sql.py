@@ -30,7 +30,7 @@ JOIN works AS w ON sb.similar_books = w.work_id;
 """, conn)
 
 def reviews(id):
-    conn = sqlite3.connect(r"C:\Users\Davide\OneDrive\Desktop\Maven Bookshelf\database sql\goodreads.db")  # crea connessione nel thread corrente
+    conn = sqlite3.connect("goodreads.db")  # crea connessione nel thread corrente
     query = f"SELECT * FROM reviews WHERE work_id = {id}"
     df = pd.read_sql_query(query, conn)
     conn.close()
